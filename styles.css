@@ -1,0 +1,231 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.hero {
+    background: url('fundo.png') center/cover no-repeat;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    padding: 0 20px;
+}
+
+/* Sobreposição para o fundo */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 2rem;
+    z-index: 2;
+    text-align: center;
+}
+
+/* Cart e pop-ups */
+.cart-details-popup, .product-details-popup, .finalizeOrderPopup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    display: none;
+}
+
+.cart-details-popup.active, .product-details-popup.active, .finalizeOrderPopup.active {
+    display: block;
+}
+
+/* Botão de fechar do popup */
+.product-details-popup .close-btn, 
+.cart-details-popup .close-btn, 
+.finalizeOrderPopup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 10000; /* Garantir que o botão fique acima de outros elementos */
+    color: #333; /* Ajuste a cor conforme a necessidade */
+    background-color: #fff; /* Fundo branco para visibilidade */
+    border: 1px solid #ccc; /* Um contorno para destacar */
+    border-radius: 50%; /* Faz um botão circular */
+    width: 30px; 
+    height: 30px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Ajuste no layout do produto e carrinho */
+.product-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+/* Ajuste de detalhes do produto */
+.product-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.product-details h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.product-details .quantity {
+    margin: 10px 0;
+}
+
+.product-details .btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+#productDescription {
+    white-space: pre-line; /* Permite quebras de linha do texto */
+    word-wrap: break-word; /* Quebra as palavras longas se necessário */
+    max-width: 100%;
+}
+
+.product-card .card-text {
+    font-size: 0.9rem;
+    overflow: hidden; /* Esconde qualquer texto que ultrapasse o limite */
+    text-overflow: ellipsis; /* Exibe '...' quando o texto for cortado */
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    max-width: 100%; /* Garante que o texto não ultrapasse o limite */
+}
+
+#cart {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 15px 25px; /* Aumentando o padding para maior visibilidade */
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 2rem; /* Aumentando o tamanho do ícone para melhorar a visibilidade */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999; /* Garantindo que o ícone fique acima de outros elementos */
+}
+
+/* Adicionando margens e padding para dispositivos móveis */
+@media (max-width: 768px) {
+    .hero {
+        height: 200px;
+        padding: 0 10px;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .product-details-popup, .cart-details-popup, .finalizeOrderPopup {
+        width: 90%;
+    }
+
+    .product-details {
+        width: 100%;
+    }
+
+    .product-card {
+        margin: 5px;
+    }
+
+    .product-card img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .product-details h2 {
+        font-size: 1.2rem;
+    }
+
+    .product-details .btn {
+        font-size: 1.2rem;
+    }
+
+    #cart {
+        bottom: 15px; /* Ajuste da posição inferior */
+        right: 15px; /* Ajuste da posição lateral */
+        font-size: 1.8rem; /* Ajustando o tamanho da fonte para telas menores */
+        padding: 12px 20px; /* Ajuste do padding para telas menores */
+    }
+    .product-card .card-text {
+        font-size: 0.8rem; /* Diminui o tamanho da descrição do lanche */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.2rem;
+    }
+
+    .product-card img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .product-details h2 {
+        font-size: 1rem;
+    }
+
+    .product-details .btn {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    #cart {
+        bottom: 10px; /* Ajuste da posição inferior */
+        right: 10px; /* Ajuste da posição lateral */
+        font-size: 1.6rem; /* Ajustando o tamanho do ícone para telas muito pequenas */
+        padding: 10px 15px; /* Menor padding */
+    }
+
+    .product-card .card-text {
+        font-size: 0.75rem; /* Reduzindo o texto da descrição ainda mais */
+    }
+}

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cardápio Online</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    
+
+    
+        
+        <div class="hero text-center">
+            <h1>Divinos Lanches</h1>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">Menu</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link active" href="#lanches">Lanches</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#pasteis">Pastéis</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Lanches Section -->
+        <section id="lanches" class="py-5">
+            <div class="container">
+                <h2 class="mb-4">Lanches</h2>
+                <div class="row">
+                    <!-- X Salada -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card product-card p-3" onclick="toggleDetails(this)">
+                            <div class="product-details">
+                                <img src="salada.png" alt="X Salada">
+                                <div>
+                                    <h5 class="card-title">X Salada</h5>
+                                    <h6 class="card-title">Hamburger,Quiejo,Maionese,Alface,Tomate,Batata Palha</h6>
+                                    <p class="card-text">R$ 14,00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- X Burger -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card product-card p-3" onclick="toggleDetails(this)">
+                            <div class="product-details">
+                                <img src="burger.png" alt="X Burger">
+                                <div>
+                                    <h5 class="card-title">X Burger</h5>
+                                    <h6 class="card-title">Hamburger,Quiejo,Maionese,Batata Palha</h6>
+                                    <p class="card-text">R$ 10,00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- X Egg -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card product-card p-3" onclick="toggleDetails(this)">
+                            <div class="product-details">
+                                <img src="egg.png" alt="X Egg">
+                                <div>
+                                    <h5 class="card-title">X Egg</h5>
+                                    <h6 class="card-title">Hamburger,Quiejo,Maionese,Ovo,Alface,Tomate</h6>
+                                    <h6 class="card-title">Batata Palha</h6>
+                                    <p class="card-text">R$ 14,00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- X Bacon -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card product-card p-3" onclick="toggleDetails(this)">
+                            <div class="product-details">
+                                <img src="bacon.png" alt="X Bacon">
+                                <div>
+                                    <h5 class="card-title">X Bacon</h5>
+                                    <h6 class="card-titleid">Hamburger,Quiejo,Maionese,Bacon,Alface</h6>
+                                    <h6 class="card-titleid" >Tomate,Batata Palha</h6>
+                                    <p class="card-text">R$ 16,00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- X Calafrango -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card product-card p-3" onclick="toggleDetails(this)">
+                            <div class="product-details">
+                                <img src="calafrango.png" alt="X Calafrango">
+                                <div>
+                                    <h5 class="card-title">X Calafrango</h5>
+                                    <h6 class="card-title">Hamburger,Quiejo,Maionese,Frango,Calabresa</h6>
+                                    <h6 class="card-title">Alface,Tomate,Batata Palha</h6>
+                                    <p class="card-text">R$ 18,00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- X Frango -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card product-card p-3" onclick="toggleDetails(this)">
+                            <div class="product-details">
+                                <img src="frango.png" alt="X Frango">
+                                <div>
+                                    <h5 class="card-title">X Frango</h5>
+                                    <h6 class="card-title">Hamburger,Quiejo,Maionese,Frango,Alface,Tomate</h6>
+                                    <h6 class="card-title">Batata Palha</h6>
+                                    <p class="card-text">R$ 15,00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- X Calabresa -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card product-card p-3" onclick="toggleDetails(this)">
+                            <div class="product-details">
+                                <img src="calabresa.png" alt="X Calabresa">
+                                <div>
+                                    <h5 class="card-title">X Calabresa</h5>
+                                    <h6 class="card-title">Hamburger,Quiejo,Maionese,Calabresa,Alface,Tomate</h6>
+                                    <h6 class="card-title">Batata Palha</h6>
+                                    <p class="card-text">R$ 14,00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- X Egg Bacon -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card product-card p-3" onclick="toggleDetails(this)">
+                            <div class="product-details">
+                                <img src="eggbacon.png" alt="X Egg Bacon">
+                                <div>
+                                    <h5 class="card-title">X Egg Bacon</h5>
+                                    <h6 class="card-title">Hamburger,Quiejo,Maionese,Ovo,Bacon,Alface</h6>
+                                    <h6 class="card-title">Tomate,Batata Palha</h6>
+                                    <p class="card-text">R$ 20,00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- X Tudo -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card product-card p-3" onclick="toggleDetails(this)">
+                            <div class="product-details">
+                                <img src="tudo.png" alt="X Tudo">
+                                <div>
+                                    <h5 class="card-title">X Tudo</h5>
+                                    <h6 class="card-title" >Hamburger,Quiejo,Maionese,Ovo,Bacon,Calabresa</h6>
+                                    <h6 class="card-title" >Frango,Alface,Tomate,Batata Palha</h6>
+                                    <p class="card-text">R$ 25,00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pastéis Section -->
+        <section id="pasteis" class="py-5 bg-light">
+            <div class="container">
+                <h2 class="mb-4">Pastéis</h2>
+                <div class="row">
+                    <!-- Pastel de Carne -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card product-card p-3" onclick="toggleDetails(this)">
+                            <div class="product-details">
+                                <img src="carne.png" alt="Pastel de Carne">
+                                <div>
+                                    <h5 class="card-title">Pastel de Carne</h5>
+                                    <p class="card-text">R$ 8,00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pastel de Frango -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card product-card p-3" onclick="toggleDetails(this)">
+                            <div class="product-details">
+                                <img src="pastelF.png" alt="Pastel de Frango">
+                                <div>
+                                    <h5 class="card-title">Pastel de Frango</h5>
+                                    <p class="card-text">R$ 8,00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pastel de Queijo -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card product-card p-3" onclick="toggleDetails(this)">
+                            <div class="product-details">
+                                <img src="queijo.png" alt="Pastel de Queijo">
+                                <div>
+                                    <h5 class="card-title">Pastel de Queijo</h5>
+                                    <p class="card-text">R$ 8,00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pastel de Pizza -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card product-card p-3" onclick="toggleDetails(this)">
+                            <div class="product-details">
+                                <img src="pizza.png" alt="Pastel de Pizza">
+                                <div>
+                                    <h5 class="card-title">Pastel de Pizza</h5>
+                                    <p class="card-text">R$ 8,00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Pastel de Frango C/ Catupiry-->
+                    <div class="col-md-6 mb-4">
+                        <div class="card product-card p-3" onclick="toggleDetails(this)">
+                            <div class="product-details">
+                                <img src="frangoC.png" alt="Pastel de Frango C/Catupiry">
+                                <div>
+                                    <h5 class="card-title">Pastel de Frango C/Catuíry</h5>
+                                    <p class="card-text">R$ 10,00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!--Pastel de Carne C/ Queijo-->
+                     <div class="col-md-6 mb-4">
+                        <div class="card product-card p-3" onclick="toggleDetails(this)">
+                            <div class="product-details">
+                                <img src="carneC.png" alt="Pastel de Carne C/ Queijo">
+                                <div>
+                                    <h5 class="card-title">Pastel de Carne C/ Queijo</h5>
+                                    <p class="card-text">R$ 10,00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Carrinho -->
+<div id="cart" class="position-fixed">
+    <button class="btn btn-primary" onclick="toggleCart()" style="font-size: 1rem; padding: 10px 20px;">
+        <i class="bi bi-cart" style="font-size: 1rem;"></i> <span id="cart-number">0</span>
+    </button>
+</div>
+
+
+        <div id="productDetailsPopup" class="product-details-popup">
+            <span class="close-btn" onclick="closePopup()">×</span>
+            <button class="close-btn" onclick="closePopup()">×</button>
+            <h3 id="productTitle">Produto</h3>
+            <p id="productPrice">R$ 0,00</p>
+            <img id="productImage" src="" alt="Imagem do Produto" style="width: 100%; height: auto;">
+            <p id="productDescription">Defina a quantidade e Observações</p>
+            <div>
+                <label for="productQuantity">Quantidade:</label>
+                <input type="number" id="productQuantity" value="1" min="1">
+            </div>
+            <div>
+                <label for="productObservation">Observação:</label>
+                <input type="text" id="productObservation">
+            </div>
+            <button class="btn btn-success" onclick="addToCart()">Adicionar ao Carrinho</button>
+        </div>
+        
+        <div id="cartDetailsPopup" class="cart-details-popup">
+            <button class="close-btn" onclick="closeCart()">×</button>
+            <h3>Itens do Carrinho</h3>
+            <div id="cartItems"></div>
+            <div id="cartTotal" class="text-right mt-3">Total: R$ 0,00</div> <!-- Total do Carrinho -->
+            <button class="btn btn-primary" onclick="finalizeOrder()">Finalizar Pedido</button>
+        </div>
+
+        <div id="finalizeOrderPopup" class="product-details-popup">
+            <button class="close-btn" onclick="closeFinalizeOrderPopup()">×</button>
+            <h3>Finalizar Pedido</h3>
+            <form id="finalizeOrderForm" onsubmit="submitOrder(event)">
+                <div class="mb-3">
+                    <label for="customerName">Nome:</label>
+                    <input type="text" id="customerName" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="customerPhone">Telefone:</label>
+                    <input type="text" id="customerPhone" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="paymentMethod">Forma de Pagamento:</label>
+                    <select id="paymentMethod" class="form-control" required onchange="togglePixInfo()">
+                        <option value="dinheiro">Dinheiro</option>
+                        <option value="cartao">Cartão</option>
+                        <option value="pix">Pix</option>
+                    </select>
+                </div>
+        
+                <!-- Exibir chave Pix e botão de copiar apenas se Pix for selecionado -->
+                <div id="pixInfo" style="display: none;">
+                    <label>Chave Pix:</label>
+                    <div class="d-flex align-items-center">
+                        <span id="pixKey">13 98170-1696</span>
+                        <button type="button" class="btn btn-outline-secondary" onclick="copyPixKey()" style="font-size: 1.2rem;">
+                            <i class="bi bi-clipboard"></i> <!-- Ícone de copiar -->
+                        </button>
+                    </div>
+                </div>
+        
+                <button type="button" id="enviarPedido">Enviar Pedido</button>
+            </form>
+        </div>
+        
+        
+        
+
+
+
+        <script src="script.js"></script>
+    </body>
+    </html>
